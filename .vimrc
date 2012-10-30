@@ -8,6 +8,8 @@ function DoPythonConfiguration()
     set expandtab
 endfunction
 
+let mapleader=","
+
 " to allow autocompletion
 set nocompatible
 
@@ -55,4 +57,22 @@ set cursorline
 " set number
 set number
 
+" save on :W as well
+command! W :w
 
+" make windows using SHIFT+{lo}
+nmap <S-l> :wincmd v<CR>
+nmap <S-o> :wincmd n<CR>
+
+" move between windows using CTRL+arrow
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+map <c-k> <c-w>k
+map <c-j> <c-w>j
+
+"
+" PLUGINS CONFIGURATION
+"
+
+" NERDTree - file explorer
+map <leader>n :NERDTreeToggle<CR>
