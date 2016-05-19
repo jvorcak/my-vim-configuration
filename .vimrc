@@ -1,5 +1,7 @@
 colorscheme elflord
 
+call pathogen#infect()
+
 " do language specific mappings to its functions
 au BufNewFile,BufRead *.py call DoPythonConfiguration()
 
